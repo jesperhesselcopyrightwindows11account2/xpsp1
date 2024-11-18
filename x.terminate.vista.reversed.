@@ -1,0 +1,26 @@
+<iostream> #include all down as possible as <iostream> #declude <div class"post-list"> and further down
+
+laxtramarerar, triangulerar, omvärderar, friserar, copyright jesper hessel.
+
+#copyright Jesper Hessel.
+
+---
+layout: page
+permalink: thoughts/
+title: Thoughts
+icon: /images/thoughts.png
+published: false
+---
+
+<div class="posts-list">
+  {% for post in site.posts %}
+    {% if post.category != 'snippet' %}
+	    <a href="{{ post.url }}">
+	      <div class="posts-list-item">
+	        <h3>{{ post.title }}</h3>
+          <span>{{ post.content | strip_html | truncate: 140 }}</span>
+	      </div>
+	    </a>
+    {% endif %}
+  {% endfor %}
+</div>
